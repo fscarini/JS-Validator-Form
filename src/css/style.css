@@ -27,42 +27,62 @@
     width: 350px;
 }
 
-.form-body{
+#form-body > .span-required{
+    margin: 6px 0 15px 12px;
+    padding: 0;
+    font-size: 1.2rem;
+    color: rgb(240, 8, 8);
+    font-weight: 700;
+    display: none;
+}
+
+#form-body{
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     width: 34rem;
-    height: 38rem;
+    height: 42rem;
     background-color: #FFFFFF;
-    padding: 20px;
-    gap: 15px;
 }
 
-.form-body > input, textarea{
+#form-body > input, textarea{
+    margin-bottom: 15px;
     width: 30rem;
     height: 3.5rem;
     padding: 20px;
     font-size: 1.5rem;
     font-weight: 700;
     color: #A8A8A8;
-    border-radius: 6px;
-    border:  0.5px solid #000000;
+    border: 2px solid #A8A8A8;
+    border-radius: 5px;
+    transition: border 0.3s ease-in-out;
 }
 
-.form-body > textarea{
+#form-body > textarea{
     height: 12rem;
     padding: 5px 20px;
 }
 
-.form-body > span{
+#form-body > input:focus{
+    outline: none;
+    border: 2px solid #3CCC87;
+}
+
+#form-body > textarea:focus{
+    outline: none;
+}
+
+#form-body > span{
+    margin-bottom: 15px;
     font-size: 1.5rem;
     font-weight: 400;
     align-self: flex-start;
 }
 
-.form-body > button{
+#form-body > button{
+    margin-bottom: 15px;
     border: none;
     background-color: #3CCC87;
     color: #FFFFFF;

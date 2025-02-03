@@ -14,14 +14,18 @@
             <h2 class="cta-subtitle">Nos mande uma mensagem!</h2>
             <p class="cta-copy">caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos de 24h.</p>
         </div>
-        <form action="#" class="form-body">
-            <input type="text" name="nome" placeholder="Nome Completo*">
-            <input type="email" name="email" placeholder="Email*">
-            <input type="tel" name="telefone" placeholder="Telefone*">
-            <textarea type="text" name="mensagem" placeholder="Mensagem*"></textarea>
+        <form action="#" id="form-body">
+            <input type="text" name="nome" placeholder="Nome Completo*" class="required" oninput="nameValidate()">
+            <span class="span-required">Campo obrigatório: pelo menos 5 caracteres</span>
+            <input type="email" name="email" placeholder="Email*" class="required" oninput="emailValidate()">
+            <span class="span-required">Campo obrigatório: e-mail incorreto</span>
+            <input type="tel" name="telefone" placeholder="Telefone*" maxlength="15" class="required" oninput="phoneValidate()">
+            <span class="span-required">Campo obrigatório: digite seu número de telefone</span>
+            <textarea type="text" name="mensagem" placeholder="Mensagem" class="required"></textarea>
             <span>* campos obrigatórios</span>
             <button type="submit" name="enviar">Enviar</button>
         </form>
     </div>
 </body>
+<script src="src/js/script.js"></script>
 </html>
